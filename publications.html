@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>publications | Ana Manzano Rodríguez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand"><strong>Ana</strong> Manzano Rodríguez</a>
+  <ul class="nav-links">
+    <li><a href="index.html">about</a></li>
+    <li><a href="news.html">news</a></li>
+    <li><a href="publications.html" class="active">publications</a></li>
+    <li><a href="cv.html">cv</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <h1 class="page-title">publications</h1>
+
+  <input type="text" class="pub-filter" id="pubFilter" placeholder="Type to filter" oninput="filterPubs(this.value)">
+
+  <!-- 2025 -->
+  <div class="pub-year-group" data-year="2025">
+    <div class="pub-year-label">2025</div>
+
+    <div class="pub-item" data-title="bridging gap hidden challenges adoption artificial intelligence surgery british journal">
+      <div class="pub-thumb-placeholder">
+        <!--
+          TO ADD A THUMBNAIL: replace this div with:
+          <img src="assets/img/pub/bjs2025.jpg" alt="" class="pub-thumb">
+        -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+      </div>
+      <div class="pub-details">
+        <div class="pub-title">Bridging the gap: exposing the hidden challenges towards adoption of artificial intelligence in surgery</div>
+        <div class="pub-authors"><span class="me">Ana Manzano Rodríguez</span>, Cees Snoek, Marlies Schijven</div>
+        <div class="pub-venue"><em>British Journal of Surgery</em>, 2025</div>
+        <div class="pub-buttons">
+          <a href="https://academic.oup.com/bjs/article/112/1/znae271/7906649" target="_blank" class="pub-btn">PDF</a>
+          <a href="https://doi.org/10.1093/bjs/znae271" target="_blank" class="pub-btn">DOI</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+    TO ADD MORE PUBLICATIONS, copy this block and fill in your details:
+
+    <div class="pub-year-group" data-year="2026">
+      <div class="pub-year-label">2026</div>
+      <div class="pub-item" data-title="your paper title keywords here">
+        <div class="pub-thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+        </div>
+        <div class="pub-details">
+          <div class="pub-title">Your Paper Title Here</div>
+          <div class="pub-authors"><span class="me">Ana Manzano Rodríguez</span>, Co-Author 1, Co-Author 2</div>
+          <div class="pub-venue"><em>Conference or Journal Name</em>, 2026</div>
+          <div class="pub-buttons">
+            <a href="YOUR_PDF_URL" target="_blank" class="pub-btn">PDF</a>
+            <a href="YOUR_CODE_URL" target="_blank" class="pub-btn">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+</div>
+
+<footer>
+  <p>© Copyright 2025 Ana Manzano Rodríguez.</p>
+</footer>
+
+<script>
+  function filterPubs(q) {
+    q = q.toLowerCase();
+    document.querySelectorAll('.pub-year-group').forEach(g => {
+      let v = 0;
+      g.querySelectorAll('.pub-item').forEach(item => {
+        const show = item.dataset.title.includes(q);
+        item.classList.toggle('hidden', !show);
+        if (show) v++;
+      });
+      g.classList.toggle('empty', v === 0);
+    });
+  }
+</script>
+
+</body>
+</html>
