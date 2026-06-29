@@ -160,6 +160,16 @@ h2.sub-head {
   padding-right: 2rem;
   color: var(--text);
 }
+.photo-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.photo-link:hover {
+  color: var(--accent);
+}
 
 /* ── PUBLICATIONS ── */
 .pub-filter {
