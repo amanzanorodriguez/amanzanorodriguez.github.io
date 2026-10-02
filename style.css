@@ -252,9 +252,9 @@ h2.sub-head {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   vertical-align: middle;
-  color: var(--accent);
-  background: #f8eefa;
-  border: 1px solid #dbb2e4;
+  color: #b565c4;
+  background: #fbf5fc;
+  border: 1px solid #e8d2ed;
   border-radius: 4px;
 }
 .pub-item.hidden { display: none; }
