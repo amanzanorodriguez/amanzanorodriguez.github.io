@@ -242,6 +242,21 @@ h2.sub-head {
   transition: background 0.13s, color 0.13s, border-color 0.13s;
 }
 .pub-btn:hover { background: var(--text); color: #fff; border-color: var(--text); text-decoration: none; }
+.pub-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: var(--accent);
+  background: #f8eefa;
+  border: 1px solid #dbb2e4;
+  border-radius: 4px;
+}
 .pub-item.hidden { display: none; }
 .pub-year-group.empty { display: none; }
 
